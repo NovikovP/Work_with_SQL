@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySQLConnection", "MySQLConnection\MySQLConnection.csproj", "{3F0120D1-A5E7-45AF-A454-F1283BAD5779}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySqlLib", "MySqlLib\MySqlLib.csproj", "{77CCBA8F-935C-4192-97ED-4553D72DDCB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySQLLibTest", "MySQLLibTest\MySQLLibTest.csproj", "{E31169A2-A5DB-4AFB-9412-AB8BEE80CAF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +30,14 @@ Global
 		{3F0120D1-A5E7-45AF-A454-F1283BAD5779}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F0120D1-A5E7-45AF-A454-F1283BAD5779}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F0120D1-A5E7-45AF-A454-F1283BAD5779}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77CCBA8F-935C-4192-97ED-4553D72DDCB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77CCBA8F-935C-4192-97ED-4553D72DDCB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77CCBA8F-935C-4192-97ED-4553D72DDCB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77CCBA8F-935C-4192-97ED-4553D72DDCB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E31169A2-A5DB-4AFB-9412-AB8BEE80CAF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E31169A2-A5DB-4AFB-9412-AB8BEE80CAF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E31169A2-A5DB-4AFB-9412-AB8BEE80CAF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E31169A2-A5DB-4AFB-9412-AB8BEE80CAF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

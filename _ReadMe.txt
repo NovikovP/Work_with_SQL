@@ -13,4 +13,48 @@
 	»спользовать функцию можно в любой части кода, не заморачива€сь на прописывани€ коннектов и т.п. вот так:
 	string parama = Sqlishe.run_mysql_return("select ostatok from cards where articul='0001'");
 
-3. 
+3. MySQLLib -пример более совершенного класса дл€ работы с базой данных.
+	—мысл как и прежде в минимизации кода и приведени€ его (кода) в более удобочитаемый вид.
+	¬ примере ниже, в отдельном классе реализованы не только методы выполн€ющие запросы 
+	типа (Scalar и NonQuery) но и метод возвращающий набор данных в DataTable. ѕри этом продумана обработка 
+	исключительных ситуаций.
+	ѕример использовани€:
+	MySqlLib.MySqlData.MySqlExecuteData.MyResultData result = new MySqlLib.MySqlData.MySqlExecuteData.MyResultData();
+	result = MySqlLib.MySqlData.MySqlExecuteData.SqlReturnDataset("select * from table_name", "Database=base;Data Source=localhost;User Id=root;Password=pass");
+
+            if (result.HasError == false)
+            {
+                dataGridView1.Columns.Clear();
+                dataGridView1.DataSource = result.ResultData.DefaultView;
+            }
+            else
+            {
+                MessageBox.Show(result.ErrorText);
+            }
+
+	как использу€ этот класс вывести данные в несколько textbox(ов).
+	к примеру есть запрос, SELECT fio,adress,info FROM users WHERE id='10'
+	¬от так:
+	//ѕровер€ем есть ли в выборке вообще хоть что-то?
+	if (result.ResultData.DefaultView.Table.Rows.Count > 0)
+	{
+	  //ѕомещаем значени€ в текстовые пол€.
+	  textbox_fio.Text = result.ResultData.DefaultView.Table.Rows[0]["fio"].ToString();
+	  textbox_adress.Text = result.ResultData.DefaultView.Table.Rows[0]["adress"].ToString();
+	  textbox_info.Text = result.ResultData.DefaultView.Table.Rows[0]["info"].ToString();
+	}
+
+	можно делать и вставку, изменение, и удаление позиций, дл€ этого есть метод:
+	MySqlLib.MySqlData.MySqlExecute.SqlNoneQuery
+	¬от, пример того как заставить его работать:
+	MySqlLib.MySqlData.MySqlExecute.MyResult result = new MySqlLib.MySqlData.MySqlExecute.MyResult();
+            result = MySqlLib.MySqlData.MySqlExecute.SqlNoneQuery("insert into table (field1, field2) values ('value1','value2')", "Database=inventar_alleya;Data Source=localhost;User Id=root;Password=240580");     
+            if (result.HasError == false)
+            {
+                MessageBox.Show("«апрос успешно выполнен!");
+            }
+            else
+            {
+                MessageBox.Show(result.ErrorText);
+            }
+
