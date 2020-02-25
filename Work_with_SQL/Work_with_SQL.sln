@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\_ReadMe.txt = ..\_ReadMe.txt
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySQLConnection", "MySQLConnection\MySQLConnection.csproj", "{3F0120D1-A5E7-45AF-A454-F1283BAD5779}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{0A5E9EDF-604C-44E2-8BEB-CBACC505B4AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A5E9EDF-604C-44E2-8BEB-CBACC505B4AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A5E9EDF-604C-44E2-8BEB-CBACC505B4AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F0120D1-A5E7-45AF-A454-F1283BAD5779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F0120D1-A5E7-45AF-A454-F1283BAD5779}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F0120D1-A5E7-45AF-A454-F1283BAD5779}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F0120D1-A5E7-45AF-A454-F1283BAD5779}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
